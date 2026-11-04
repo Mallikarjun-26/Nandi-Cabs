@@ -1,7 +1,9 @@
 (() => {
   const cfg = window.CAB_CONFIG || {};
   const data = window.CAB_DATA || {};
-  const path = decodeURI(location.pathname).replace(/\/$/, '') || '/';
+  const basePath = window.NANDI_BASE_PATH || '';
+  const currentPath = basePath && location.pathname.startsWith(basePath) ? location.pathname.slice(basePath.length) || '/' : location.pathname;
+  const path = decodeURI(currentPath).replace(/\/$/, '') || '/';
   const parts = path.split('/').filter(Boolean);
   const route = data.routes?.find(item => item.slug === parts[1]);
   const page = route ? 'route' : parts[0] || 'home';
@@ -50,9 +52,9 @@
   let canonical = document.head.querySelector('link[rel="canonical"]');
   if (origin && /^https?:\/\//i.test(origin) && !/example\.com/i.test(origin)) {
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.append(canonical); }
-    canonical.href = `${origin}${path === '/' ? '/' : `${path}/`}`;
+    canonical.href = `${origin}${basePath}${path === '/' ? '/' : `${path}/`}`;
     setMeta('meta[property="og:url"]', 'content', canonical.href, { property: 'og:url' });
-    setMeta('meta[property="og:image"]', 'content', `${origin}/assets/home-hero-premium.jpg`, { property: 'og:image' });
+    setMeta('meta[property="og:image"]', 'content', `${origin}${basePath}/assets/home-hero-premium.jpg`, { property: 'og:image' });
   } else canonical?.remove();
 
   const addJsonLd = (name, value) => {

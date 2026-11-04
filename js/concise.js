@@ -1,5 +1,7 @@
 (() => {
-  const path = location.pathname.replace(/\/$/, '') || '/';
+  const basePath = window.NANDI_BASE_PATH || '';
+  const currentPath = basePath && location.pathname.startsWith(basePath) ? location.pathname.slice(basePath.length) || '/' : location.pathname;
+  const path = currentPath.replace(/\/$/, '') || '/';
   const main = document.querySelector('#main');
   if (!main) return;
 

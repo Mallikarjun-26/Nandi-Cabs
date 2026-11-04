@@ -1,6 +1,8 @@
 (() => {
   const cfg=window.CAB_CONFIG||{}, data=window.CAB_DATA||{}, root=document.querySelector('#app');
-  const path=decodeURI(location.pathname).replace(/\/$/,'')||'/', parts=path.split('/').filter(Boolean);
+  const basePath=window.NANDI_BASE_PATH||'';
+  const currentPath=basePath&&location.pathname.startsWith(basePath)?location.pathname.slice(basePath.length)||'/':location.pathname;
+  const path=decodeURI(currentPath).replace(/\/$/,'')||'/', parts=path.split('/').filter(Boolean);
   const titleCase=s=>s.replaceAll('-',' ').replace(/\b\w/g,c=>c.toUpperCase());
   const escape=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const money=n=>'₹'+Number(n).toLocaleString('en-IN');
@@ -46,7 +48,7 @@
     return `<main id="main"><section class="page-hero"><div class="wrap"><div class="breadcrumb"><a href="/">Home</a> / ${privacy?'Privacy':'Booking terms'}</div><span class="eyebrow">${cfg.brand||'Nandi Cabs'} · Bengaluru</span><h1>${privacy?'Privacy, in plain language.':'Clear terms for your journey.'}</h1><p>Last updated 19 October 2026. Please review these details before relying on this page as the final business policy.</p></div></section><section class="section"><article class="wrap legal">${legalBody}</article></section>${CTA}</main>`;
   }
   const body=page==='home'?home():['airport-cabs','local-cabs','outstation-cabs'].includes(page)?servicePage(page):page==='routes'?routesPage():page==='route'&&route?routePage(route):page==='about'?aboutPage():page==='contact'?contactPage():['terms','privacy'].includes(page)?legalPage(page):home();
-  root.innerHTML=header+body+footer;
+  root.innerHTML=(header+body+footer).replace(/\b(href|src)=(['"])\/(?!\/)/g,(_,attribute,quote)=>`${attribute}=${quote}${basePath}/`);
   root.insertAdjacentHTML('beforeend',`<dialog class="trip-feedback" id="trip-feedback" aria-labelledby="trip-feedback-title"><button class="feedback-close" type="button" aria-label="Close feedback">×</button><form id="trip-feedback-form"><span class="eyebrow">Trip complete</span><h2 id="trip-feedback-title">How was your ride?</h2><p class="muted">Your feedback helps us improve the next journey.</p><label for="feedback-rating">Your rating</label><select id="feedback-rating" required><option value="">Choose a rating</option><option value="5">★★★★★ Excellent</option><option value="4">★★★★☆ Good</option><option value="3">★★★☆☆ It was okay</option><option value="2">★★☆☆☆ Could be better</option><option value="1">★☆☆☆☆ Poor</option></select><label for="feedback-message">Anything you’d like to share?</label><textarea id="feedback-message" rows="3" placeholder="Optional feedback"></textarea><button class="btn btn-primary" type="submit">Send feedback ↗</button><p class="feedback-status" aria-live="polite"></p></form></dialog>`);
 
   document.querySelectorAll('.faq-q').forEach(btn=>btn.addEventListener('click',()=>{const item=btn.parentElement,open=!item.classList.contains('open');item.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);btn.lastElementChild.textContent=open?'−':'+'}));
