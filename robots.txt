@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://mallikarjun-26.github.io/Nandi-Cabs/sitemap.xml
