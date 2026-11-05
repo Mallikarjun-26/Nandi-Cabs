@@ -7,7 +7,7 @@
   const parts = path.split('/').filter(Boolean);
   const route = data.routes?.find(item => item.slug === parts[1]);
   const page = route ? 'route' : parts[0] || 'home';
-  const brand = cfg.brand || 'Nandi Cabs';
+  const brand = cfg.brand || 'Groovy Cabs';
   const origin = String(cfg.canonicalOrigin || '').replace(/\/$/, '');
   const titleMap = {
     home: `Bengaluru Cab Service & Taxi Booking | ${brand}`,
@@ -54,7 +54,7 @@
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.append(canonical); }
     canonical.href = `${origin}${basePath}${path === '/' ? '/' : `${path}/`}`;
     setMeta('meta[property="og:url"]', 'content', canonical.href, { property: 'og:url' });
-    setMeta('meta[property="og:image"]', 'content', `${origin}${basePath}/assets/home-hero-premium.jpg`, { property: 'og:image' });
+    setMeta('meta[property="og:image"]', 'content', `${origin}${basePath}/assets/groovy-hero.jpg`, { property: 'og:image' });
   } else canonical?.remove();
 
   const addJsonLd = (name, value) => {

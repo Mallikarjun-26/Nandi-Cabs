@@ -286,3 +286,44 @@ main .section{padding-block:clamp(58px,6.2vw,88px)}main .section-head{margin-bot
 .hero:before{background-size:100% 100%,cover;background-position:center,100% center;filter:saturate(1.22) brightness(1.08) contrast(1.04)}
 @media(max-width:760px){.hero:before{background-size:100% 100%,100% 100%,100% auto;background-position:center,center,center top;filter:saturate(1.2) brightness(1.08) contrast(1.04)}}
 @media(max-width:430px){.hero:before{background-size:100% 100%,100% 100%,100% auto;background-position:center,center,center top}}
+
+/* Shared interaction polish: visible keyboard focus, readable helper text, and comfortable controls. */
+body{overflow-x:clip}
+:where(a,button,summary,[role="button"]):focus-visible{outline:3px solid #bf9740;outline-offset:3px;border-radius:4px}
+.field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible,.modal-step .field input:focus-visible,.modal-step .field select:focus-visible,.modal-step .field textarea:focus-visible{outline:3px solid #6ba24b;outline-offset:2px}
+.field label{font-size:.75rem}
+.booking-note,#quick-book>.booking-note{color:#58645a;font-size:.75rem;line-height:1.5}
+.service-tabs button{min-height:44px}
+.carousel-controls button,.vehicle-carousel-shell .carousel-controls button{min-width:44px;min-height:44px}
+.route-card[role="button"]:focus-visible{outline:3px solid #bf9740;outline-offset:3px}
+@media(max-width:760px){html{scroll-padding-bottom:calc(100px + env(safe-area-inset-bottom))}.mobile-cta-contact{gap:9px}}
+
+/* Natural editorial typography and consistent copy alignment across every page. */
+body{font-size:16px;line-height:1.65;letter-spacing:-.006em}
+h1,h2,h3{font-kerning:normal;text-wrap:balance}
+h1{font-size:clamp(2.55rem,5vw,4.65rem);line-height:1.07;letter-spacing:-.045em}
+h2{font-size:clamp(1.95rem,3.4vw,3.1rem);line-height:1.12;letter-spacing:-.04em}
+h3{line-height:1.24;letter-spacing:-.025em}
+p{max-width:68ch;text-wrap:pretty}
+.center p,.center .section-head p{margin-inline:auto}
+.section-head h2,.page-hero h1,.routes-index-heading h1,.route-simple-heading h1{max-width:24ch;text-wrap:balance}
+.section-head p,.page-hero p,.route-simple-heading p{max-width:62ch;line-height:1.7}
+.hero-copy>p{max-width:46ch;line-height:1.72}
+.booking-card>p:not(.booking-note){line-height:1.55}
+.faq-q{font-size:.98rem;line-height:1.45}
+.faq-a{line-height:1.72}
+@media(max-width:760px){h1{font-size:clamp(2.4rem,9vw,3.5rem);line-height:1.08}h2{font-size:clamp(1.85rem,7vw,2.55rem);line-height:1.14}.section-head p,.page-hero p{font-size:.98rem}.hero-copy>p{font-size:1rem}}
+
+/* Groovy Cabs premium palette: deep evergreen, warm brass, and soft ivory. */
+:root{--gold:#c59a48;--gold-soft:#f1dfb4;--sage:#eaf0e5;--shadow:0 20px 54px #17251d16}
+.btn-gold{border:1px solid #e3c77e;background:linear-gradient(125deg,#f3dfa9 0%,#dfbd71 52%,#c99a43 100%);color:#1c241c;box-shadow:0 8px 20px #151d1630,inset 0 1px 0 #fff9df}
+.btn-gold:hover{background:linear-gradient(125deg,#fae9bb,#e7c778 52%,#d5a54d);box-shadow:0 12px 26px #151d1640}
+.btn-primary{background:linear-gradient(125deg,#2c5034,#18381f);box-shadow:0 8px 22px #17251d24}
+.btn-primary:hover{background:linear-gradient(125deg,#376441,#1d4227);box-shadow:0 12px 26px #17251d35}
+.soft{background:linear-gradient(135deg,#f0f2e9 0%,#f7f5ee 52%,#efe7d6 100%)}
+.section-head .eyebrow,.routes-index-heading .eyebrow,.route-simple-heading .eyebrow{color:#806025}
+.contact-box,.quote{border-radius:14px;box-shadow:0 16px 40px #263a3010}
+.vehicle-carousel-rail>.vehicle-card{box-shadow:0 20px 42px #1423192b}
+.vehicle-carousel-rail>.vehicle-card:hover{box-shadow:0 26px 48px #1423193b}
+.booking-card{border-color:#e5d8b7}
+@media(max-width:760px){.btn-gold,.btn-primary{box-shadow:0 6px 16px #17251d24}.contact-box,.quote{border-radius:12px}}
