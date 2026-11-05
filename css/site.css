@@ -273,3 +273,11 @@ main .section{padding-block:clamp(58px,6.2vw,88px)}main .section-head{margin-bot
 .brand-logo-frame{width:122px;height:52px;flex:0 0 122px;overflow:hidden;border-radius:10px;background:#f3f3f3;border:1px solid #d8e5d4;box-shadow:0 5px 16px #14221920}
 .brand-logo{position:relative;left:auto;top:auto;width:100%;height:100%;max-width:100%;object-fit:contain;object-position:center;transform:none;border:0;border-radius:0;box-shadow:none}
 @media(max-width:760px){.brand-logo-frame{width:108px;height:46px;flex-basis:108px}.brand-logo{width:100%;height:100%}}
+
+/* Groovy Cabs home hero: keep the welcome image clear beside the booking card. */
+.hero:before{inset:0;background-image:linear-gradient(90deg,#142119df 0%,#142119a8 27%,#14211948 51%,#14211910 78%),url('../assets/groovy-hero.jpg');background-size:100% 100%,130% auto;background-position:center,78% center;background-repeat:no-repeat}
+.hero:after{background:linear-gradient(0deg,#14211958 0%,transparent 48%)}
+.brand{gap:0}
+.brand-logo-frame{width:146px;height:60px;flex-basis:146px}
+@media(max-width:760px){.hero:before{background-image:linear-gradient(90deg,#142119d8 0%,#1421199c 35%,#14211948 69%),linear-gradient(0deg,#142119c5 0%,transparent 65%),url('../assets/groovy-hero.jpg');background-size:100% 100%,100% 100%,auto 620px;background-position:center,center,72% top;background-repeat:no-repeat;background-color:#142119}.hero:after{background:linear-gradient(0deg,#14211942,transparent 54%)}.brand-logo-frame{width:126px;height:52px;flex-basis:126px}}
+@media(max-width:430px){.hero:before{background-position:center,center,70% top;background-size:100% 100%,100% 100%,auto 570px}.brand-logo-frame{width:118px;height:48px;flex-basis:118px}}
