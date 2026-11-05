@@ -166,6 +166,22 @@ img{background-color:#ebe8e1}
 
 .page-hero-outstation{position:relative;isolation:isolate}.page-hero-outstation:before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#171717 0%,#171717ed 30%,#171717a5 59%,#17171740 100%),url('../assets/groovy-hero.jpg') center 52%/cover no-repeat}.page-hero-outstation>.wrap{position:relative;z-index:1}@media(max-width:700px){.page-hero-outstation:before{background-image:linear-gradient(90deg,#171717ed,#1717179e),url('../assets/groovy-hero.jpg');background-position:center,58% center}}
 
+/* Homepage fleet carousel: compact, comparable airport and trip package rates. */
+.home-rate-carousel{scroll-padding-inline:4px}
+.home-rate-card{flex:0 0 clamp(310px,31vw,370px);min-width:290px;min-height:0;height:auto;aspect-ratio:auto}
+.home-rate-card>img{flex:0 0 150px;height:150px;min-height:150px;max-height:150px;object-fit:cover}
+.home-rate-card .local-rate-content{padding:14px 16px 16px}
+.home-rate-card .local-rate-content h3{margin-bottom:10px}
+.home-rate-prices{display:grid;border-top:1px solid #ffffff26}
+.home-rate-prices>div{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border-bottom:1px solid #ffffff20}
+.home-rate-prices span{color:#e1e7df;font-size:.75rem;line-height:1.3}
+.home-rate-prices strong{flex:none;color:#fff2cf;font:700 .9rem/1.2 var(--display);white-space:nowrap}
+.local-rate-content .home-rate-extras{margin:9px 0 12px;color:#d4ddd4;font-size:.7rem;line-height:1.48}
+.home-rate-enquire{margin-top:auto;text-align:center;text-decoration:none}
+.home-rate-note{margin:8px 2px 0;color:var(--muted);font-size:.76rem;line-height:1.5}
+@media(max-width:760px){.home-rate-card{flex-basis:min(86vw,370px)}.home-rate-card>img{flex-basis:136px;height:136px;min-height:136px;max-height:136px}.home-rate-note{font-size:.72rem}}
+@media(max-width:430px){.home-rate-card{flex-basis:86vw;min-width:0}.home-rate-card .local-rate-content{padding:13px 14px 15px}.home-rate-prices>div{gap:7px}.home-rate-prices span{font-size:.72rem}}
+
 .routes-index{padding:44px 0 74px;background:var(--paper);min-height:calc(100vh - 78px)}.routes-index>.wrap{max-width:1190px}.routes-index-heading{margin:0 0 12px}.routes-index-heading .eyebrow{color:#4f843c}.routes-index-heading h1{font-size:clamp(2rem,4vw,3rem);margin:8px 0 18px;letter-spacing:-.05em}.routes-index .carousel-controls{margin:0 0 10px}.route-simple-heading{padding:30px 0 24px;background:linear-gradient(120deg,#f4f1e8,#fff);border-bottom:1px solid var(--line)}.route-simple-heading .wrap{display:grid;justify-items:start;gap:8px}.route-back-link{font-size:.8rem;color:#68716a;margin-bottom:6px;text-decoration:underline;text-underline-offset:3px}.route-simple-heading .eyebrow{color:#4f843c}.route-simple-heading h1{font-size:clamp(2rem,4vw,3.1rem);margin:4px 0}.route-simple-heading p{margin:0;color:var(--muted);font-size:.92rem}.route-rate-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.route-rate-card{padding:20px;border:1px solid #ffffff;background:linear-gradient(145deg,#fff,#f0eee7);border-radius:12px;box-shadow:0 12px 32px #263a3010}.route-rate-card>span,.route-rate-card>strong,.route-rate-card>small{display:block}.route-rate-card>span{font:700 1rem var(--display);color:var(--ink)}.route-rate-card>small{margin-top:4px;color:var(--muted);font-size:.76rem}.route-rate-card>strong{margin-top:17px;color:#386b35;font:700 1.25rem var(--display)}.route-rate-card>p{margin:8px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}@media(max-width:900px){.route-rate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.routes-index{padding:32px 0 55px}.routes-index-heading h1{font-size:2.1rem}.route-simple-heading{padding:24px 0 20px}.route-rate-grid{grid-template-columns:1fr 1fr;gap:9px}.route-rate-card{padding:14px}.route-rate-card>strong{font-size:1.05rem}}
 
 /* Compact mobile contact actions; the existing booking CTA stays in its own bottom bar. */
