@@ -204,6 +204,28 @@ img{background-color:#ebe8e1}
 .home-rate-note{color:#657066;font-size:.75rem}
 @media(max-width:760px){.local-rate-carousel,.vehicle-carousel-rail{gap:13px}.local-rate-card,.vehicle-card{flex-basis:min(84vw,350px);min-width:0}.local-rate-card>img,.vehicle-card>img{flex-basis:132px;height:132px;min-height:132px;max-height:132px}.local-rate-content,.vehicle-content{padding:13px 14px 15px}}
 
+/* Brand green canvas and consistent forest-green vehicle cards across the site. */
+:root{--paper:#edf3eb;--sage:#e3ede0}
+body{background:var(--paper)}
+.soft{background:linear-gradient(135deg,#e6efe3 0%,#f1f5ee 100%)}
+.page-hero,.footer,.cta-band{background:linear-gradient(145deg,#244a32 0%,#18381f 100%)}
+.local-rate-card,.vehicle-card{border-color:#8ca782;background:linear-gradient(145deg,#2b4934 0%,#1d3627 58%,#14271d 100%);box-shadow:inset 0 1px 0 #ffffff20,0 16px 34px #17291d30}
+.local-rate-card:before{background:radial-gradient(ellipse at 8% 0%,#e9d59b18,transparent 48%),linear-gradient(130deg,#ffffff0c,transparent 58%)}
+.local-rate-card:hover,.vehicle-card:hover{border-color:#c5ab67;box-shadow:inset 0 1px 0 #ffffff2a,0 22px 42px #12241944}
+.local-rate-content,.vehicle-content{color:#f4f4eb}
+.local-rate-content h3,.vehicle-content h3{color:#f5f3e8}
+.local-rate-content h3 span,.vehicle-content .seats{color:#d8c78f}
+.home-rate-prices{border-color:#ffffff2a}
+.home-rate-prices>div{border-color:#ffffff1c}
+.home-rate-prices span{color:#e1e8de}
+.home-rate-prices strong{color:#f1d995}
+.local-rate-content .home-rate-extras{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 14px;list-style:none;margin:9px 0 13px;padding:0;color:#e2e8df;font-size:.68rem;line-height:1.4}
+.home-rate-extras li{position:relative;margin:0;padding:0 0 0 11px;color:inherit}
+.home-rate-extras li:before{content:'•';position:absolute;left:0;color:#e0c478;font-weight:800}
+.home-rate-enquire{align-self:stretch}
+.home-rate-note{width:max-content;max-width:none;margin-top:9px;white-space:nowrap;color:#4e6352;font-size:.74rem;line-height:1.35}
+@media(max-width:760px){.local-rate-content .home-rate-extras{gap:7px 10px;font-size:.66rem}.home-rate-note{width:auto;white-space:normal}}
+
 .routes-index{padding:44px 0 74px;background:var(--paper);min-height:calc(100vh - 78px)}.routes-index>.wrap{max-width:1190px}.routes-index-heading{margin:0 0 12px}.routes-index-heading .eyebrow{color:#4f843c}.routes-index-heading h1{font-size:clamp(2rem,4vw,3rem);margin:8px 0 18px;letter-spacing:-.05em}.routes-index .carousel-controls{margin:0 0 10px}.route-simple-heading{padding:30px 0 24px;background:linear-gradient(120deg,#f4f1e8,#fff);border-bottom:1px solid var(--line)}.route-simple-heading .wrap{display:grid;justify-items:start;gap:8px}.route-back-link{font-size:.8rem;color:#68716a;margin-bottom:6px;text-decoration:underline;text-underline-offset:3px}.route-simple-heading .eyebrow{color:#4f843c}.route-simple-heading h1{font-size:clamp(2rem,4vw,3.1rem);margin:4px 0}.route-simple-heading p{margin:0;color:var(--muted);font-size:.92rem}.route-rate-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.route-rate-card{padding:20px;border:1px solid #ffffff;background:linear-gradient(145deg,#fff,#f0eee7);border-radius:12px;box-shadow:0 12px 32px #263a3010}.route-rate-card>span,.route-rate-card>strong,.route-rate-card>small{display:block}.route-rate-card>span{font:700 1rem var(--display);color:var(--ink)}.route-rate-card>small{margin-top:4px;color:var(--muted);font-size:.76rem}.route-rate-card>strong{margin-top:17px;color:#386b35;font:700 1.25rem var(--display)}.route-rate-card>p{margin:8px 0 0;color:var(--muted);font-size:.72rem;line-height:1.5}@media(max-width:900px){.route-rate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.routes-index{padding:32px 0 55px}.routes-index-heading h1{font-size:2.1rem}.route-simple-heading{padding:24px 0 20px}.route-rate-grid{grid-template-columns:1fr 1fr;gap:9px}.route-rate-card{padding:14px}.route-rate-card>strong{font-size:1.05rem}}
 
 /* Compact mobile contact actions; the existing booking CTA stays in its own bottom bar. */
