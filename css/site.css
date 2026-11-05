@@ -346,3 +346,17 @@ p{max-width:68ch;text-wrap:pretty}
 @media(max-width:1050px){.footer>.wrap{width:min(100% - 48px,720px)}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 36px}.footer-grid>div:first-child{grid-column:1/-1}.footer-grid>div:first-child p{max-width:52ch}}
 @media(max-width:600px){.footer{padding:48px 0 calc(96px + env(safe-area-inset-bottom))}.footer>.wrap{width:calc(100% - 40px)}.footer-grid{grid-template-columns:1fr 1fr;gap:32px 18px;padding-bottom:38px}.footer-grid>div:first-child{grid-column:1/-1}.footer .brand{margin-bottom:18px}.footer .brand-logo-frame{width:190px;height:78px;flex-basis:190px}.footer p{font-size:.92rem;margin-bottom:20px}.footer h3{font-size:.94rem;margin-bottom:16px}.footer-links{gap:12px;font-size:.87rem}.footer-bottom{gap:8px;font-size:.78rem}}
 @media(max-width:360px){.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{align-items:flex-start}}
+
+/* Compact footer pass: keep every link and contact detail while reducing visual weight. */
+.footer{padding:42px 0 18px}
+.footer-grid{gap:clamp(24px,3vw,52px);padding-bottom:36px}
+.footer .brand{margin-bottom:16px}
+.footer .brand-logo-frame{width:154px;height:65px;flex-basis:154px;border-radius:11px}
+.footer p{max-width:360px;margin-bottom:15px;font-size:.86rem;line-height:1.58}
+.footer .link-arrow{font-size:.88rem}
+.footer h3{margin:3px 0 16px;font-size:.9rem}
+.footer-links{gap:9px;font-size:.85rem;line-height:1.45}
+.footer .whatsapp-icon{width:21px;height:21px;flex-basis:21px}
+.footer-bottom{padding-top:16px;font-size:.76rem}
+@media(max-width:1050px){.footer-grid{gap:28px 24px;padding-bottom:30px}}
+@media(max-width:600px){.footer{padding:34px 0 calc(86px + env(safe-area-inset-bottom))}.footer-grid{gap:24px 14px;padding-bottom:28px}.footer .brand{margin-bottom:14px}.footer .brand-logo-frame{width:144px;height:61px;flex-basis:144px}.footer p{font-size:.82rem;margin-bottom:14px}.footer .link-arrow{font-size:.84rem}.footer h3{font-size:.85rem;margin-bottom:12px}.footer-links{gap:8px;font-size:.78rem}.footer-bottom{gap:6px;padding-top:13px;font-size:.72rem}}
