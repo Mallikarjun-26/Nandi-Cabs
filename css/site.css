@@ -327,3 +327,22 @@ p{max-width:68ch;text-wrap:pretty}
 .vehicle-carousel-rail>.vehicle-card:hover{box-shadow:0 26px 48px #1423193b}
 .booking-card{border-color:#e5d8b7}
 @media(max-width:760px){.btn-gold,.btn-primary{box-shadow:0 6px 16px #17251d24}.contact-box,.quote{border-radius:12px}}
+
+/* Shared site footer, matched to the supplied four-column reference. */
+.footer{background:#171717;color:#f4f3ee;padding:66px 0 28px}
+.footer>.wrap{width:min(1794px,calc(100% - 86px));max-width:none}
+.footer-grid{grid-template-columns:minmax(300px,1.35fr) minmax(190px,1fr) minmax(190px,1fr) minmax(300px,1.3fr);gap:clamp(28px,5vw,92px);padding-bottom:66px}
+.footer .brand{margin:0 0 24px}
+.footer .brand-logo-frame{width:220px;height:92px;flex-basis:220px;border:1px solid #d6ddd3;border-radius:15px;background:#f7f7f4;box-shadow:0 8px 22px #0003}
+.footer p{max-width:410px;margin:0 0 26px;color:#d9d9d5;font-size:1rem;line-height:1.7}
+.footer .link-arrow{font-size:1rem;color:#f4f3ee}
+.footer h3{margin:4px 0 24px;color:#f5f4f0;font-size:1.02rem;font-weight:700;letter-spacing:-.015em}
+.footer-links{gap:14px;color:#d8d8d4;font-size:.98rem;line-height:1.55}
+.footer-links a{width:fit-content;transition:color .18s ease}
+.footer-links a:hover{color:#f0cf7e}
+.footer .whatsapp-link{display:inline-flex;align-items:center;gap:10px;color:#25D366}
+.footer .whatsapp-icon{width:24px;height:24px;flex:0 0 24px}
+.footer-bottom{padding-top:24px;color:#b5c6d1;font-size:.9rem}
+@media(max-width:1050px){.footer>.wrap{width:min(100% - 48px,720px)}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 36px}.footer-grid>div:first-child{grid-column:1/-1}.footer-grid>div:first-child p{max-width:52ch}}
+@media(max-width:600px){.footer{padding:48px 0 calc(96px + env(safe-area-inset-bottom))}.footer>.wrap{width:calc(100% - 40px)}.footer-grid{grid-template-columns:1fr 1fr;gap:32px 18px;padding-bottom:38px}.footer-grid>div:first-child{grid-column:1/-1}.footer .brand{margin-bottom:18px}.footer .brand-logo-frame{width:190px;height:78px;flex-basis:190px}.footer p{font-size:.92rem;margin-bottom:20px}.footer h3{font-size:.94rem;margin-bottom:16px}.footer-links{gap:12px;font-size:.87rem}.footer-bottom{gap:8px;font-size:.78rem}}
+@media(max-width:360px){.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.footer-bottom{align-items:flex-start}}
