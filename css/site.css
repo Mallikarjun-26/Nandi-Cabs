@@ -192,6 +192,22 @@ img{background-color:#ebe8e1}
   .mobile-contact-btn{width:46px;height:46px;min-width:46px;min-height:46px}
 }
 @media(prefers-reduced-motion:reduce){.mobile-contact-btn,.mobile-cta-book{transition:none}}
+
+/* One canonical footer size across Home, Routes, and every service page. */
+#app>.footer{padding:42px 0 18px!important}
+#app>.footer>.wrap{width:min(1794px,calc(100% - 86px));max-width:none}
+#app>.footer .footer-grid{grid-template-columns:minmax(240px,1.35fr) minmax(150px,1fr) minmax(150px,1fr) minmax(240px,1.3fr);gap:clamp(24px,3vw,52px);padding-bottom:36px}
+#app>.footer .brand{margin:0 0 16px}
+#app>.footer .brand-logo-frame{width:154px;height:65px;flex-basis:154px;border-radius:11px}
+#app>.footer p{max-width:360px;margin:0 0 15px;font-size:.86rem;line-height:1.58}
+#app>.footer .link-arrow{font-size:.88rem}
+#app>.footer h3{margin:3px 0 16px;font-size:.9rem}
+#app>.footer .footer-links{gap:9px;font-size:.85rem;line-height:1.45}
+#app>.footer .whatsapp-icon{width:21px;height:21px;flex-basis:21px}
+#app>.footer .footer-bottom{padding-top:16px;font-size:.76rem}
+@media(max-width:1050px){#app>.footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 24px;padding-bottom:30px}#app>.footer .footer-grid>div:first-child{grid-column:1/-1}}
+@media(max-width:600px){#app>.footer{padding:34px 0 calc(86px + env(safe-area-inset-bottom))!important}#app>.footer>.wrap{width:calc(100% - 40px)}#app>.footer .footer-grid{grid-template-columns:1fr 1fr;gap:24px 14px;padding-bottom:28px}#app>.footer .footer-grid>div:first-child{grid-column:1/-1}#app>.footer .brand-logo-frame{width:144px;height:61px;flex-basis:144px}#app>.footer p{font-size:.82rem;margin-bottom:14px}#app>.footer h3{font-size:.85rem;margin-bottom:12px}#app>.footer .footer-links{gap:8px;font-size:.78rem}#app>.footer .footer-bottom{gap:6px;padding-top:13px;font-size:.72rem}}
+@media(max-width:360px){#app>.footer .footer-grid{grid-template-columns:1fr}#app>.footer .footer-grid>div:first-child{grid-column:auto}}
 .brand-logo{width:72px;height:42px;flex:0 0 72px;display:block;object-fit:cover;object-position:center 48%;border:1px solid #6ba24b55;border-radius:7px;box-shadow:0 5px 16px #10181428}
 .brand{gap:11px}
 @media(max-width:430px){.brand-logo{width:66px;height:38px;flex-basis:66px}.brand{font-size:1.2rem;gap:8px}}
