@@ -1,0 +1,12 @@
+/* Shared Groovy Cabs green canvas */
+:root{--paper:#e8f0e5;--sage:#dce9d8;--line:#d0ddcb;--ink:#17271c;--muted:#5b6d5e}
+body{background:#e8f0e5;color:#17271c}
+.nav{background:#f2f6eff2;border-bottom-color:#d5e0d1}
+main{background:linear-gradient(180deg,#e8f0e5 0%,#edf3ea 50%,#e4eee1 100%)}
+main>.section{background:transparent}
+main>.section.soft{background:linear-gradient(135deg,#dce9d8 0%,#e8f0e5 58%,#d9e7d5 100%)}
+.routes-index,.route-simple-heading{background:#e8f0e5}
+.route-simple-heading{background:linear-gradient(120deg,#e2eddf,#f1f6ee);border-color:#d0ddcb}
+.route-rate-card{background:linear-gradient(145deg,#f4f8f1,#e5efe2);border-color:#d1dfcd}
+.contact-section,.faq-section-premium{background-color:#e8f0e5}
+.home-rate-note{display:none}
