@@ -1,4 +1,4 @@
-# Nandi Cabs
+# Groovy Cabs
 
 A lightweight, static, multi-page cab booking site. No build step or external JavaScript dependencies are required.
 
