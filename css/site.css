@@ -281,3 +281,8 @@ main .section{padding-block:clamp(58px,6.2vw,88px)}main .section-head{margin-bot
 .brand-logo-frame{width:146px;height:60px;flex-basis:146px}
 @media(max-width:760px){.hero:before{background-image:linear-gradient(90deg,#142119d8 0%,#1421199c 35%,#14211948 69%),linear-gradient(0deg,#142119c5 0%,transparent 65%),url('../assets/groovy-hero.jpg');background-size:100% 100%,100% 100%,auto 620px;background-position:center,center,72% top;background-repeat:no-repeat;background-color:#142119}.hero:after{background:linear-gradient(0deg,#14211942,transparent 54%)}.brand-logo-frame{width:126px;height:52px;flex-basis:126px}}
 @media(max-width:430px){.hero:before{background-position:center,center,70% top;background-size:100% 100%,100% 100%,auto 570px}.brand-logo-frame{width:118px;height:48px;flex-basis:118px}}
+
+/* Local preview refinement: use the natural hero crop and keep its detail crisp. */
+.hero:before{background-size:100% 100%,cover;background-position:center,100% center;filter:saturate(1.22) brightness(1.08) contrast(1.04)}
+@media(max-width:760px){.hero:before{background-size:100% 100%,100% 100%,100% auto;background-position:center,center,center top;filter:saturate(1.2) brightness(1.08) contrast(1.04)}}
+@media(max-width:430px){.hero:before{background-size:100% 100%,100% 100%,100% auto;background-position:center,center,center top}}
