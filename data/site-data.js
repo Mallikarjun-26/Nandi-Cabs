@@ -57,7 +57,7 @@ window.CAB_DATA = {
   vehicles: [
     { id:'sedan', name:'Comfort Sedan', seats:4, note:'Comfortable sedan.', airport:1450, local4:1300, local8:2200, perKm:13, minKm:300, allowance:350, image:'/assets/fleet-sedan.jpg', features:['Air-conditioned','2 bags'] },
     { id:'mpv', name:'Family MPV', seats:6, note:'Space for family trips.', airport:1950, local4:1500, local8:2600, perKm:17, minKm:300, allowance:400, image:'/assets/fleet-mpv.jpg', features:['Air-conditioned','4 bags'] },
-    { id:'premium', name:'Premium SUV', seats:6, note:'Extra room for longer trips.', airport:2650, local4:2000, local8:3500, perKm:21, minKm:300, allowance:450, image:'/assets/fleet-suv.jpg', features:['Air-conditioned','4 bags'] },
+    { id:'premium', name:'Premium SUV', seats:6, note:'Extra room for longer trips.', airport:2650, local4:2000, local8:3500, perKm:21, minKm:300, allowance:450, image:'/assets/innova.jpg', features:['Air-conditioned','4 bags'] },
     { id:'traveller', name:'Tempo Traveller', seats:12, note:'Group transport.', airport:4900, local4:2500, local8:4000, perKm:28, minKm:300, allowance:600, image:'/assets/fleet-traveller.jpg', features:['Air-conditioned','Group luggage'] }
   ],
   routes: [

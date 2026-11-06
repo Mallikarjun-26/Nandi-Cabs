@@ -27,16 +27,16 @@
   const localRates=[
     {id:'sedan',name:'Etios',seats:'4+1',image:'/assets/fleet-sedan.jpg',four:1300,eight:2200,extra:12,tag:'City smart'},
     {id:'mpv',name:'Ertiga',seats:'6+1',image:'/assets/fleet-mpv.jpg',four:1500,eight:2600,extra:15,tag:'Most booked',featured:true},
-    {id:'premium',name:'Innova',seats:'7+1',image:'/assets/fleet-suv.jpg',four:2000,eight:3500,extra:18,tag:'Premium comfort'},
-    {id:'traveller',name:'Innova Crysta',seats:'7+1',image:'/assets/fleet-suv.jpg',four:2500,eight:4000,extra:20,tag:'Executive choice'}
+    {id:'premium',name:'Innova',seats:'7+1',image:'/assets/innova.jpg',four:2000,eight:3500,extra:18,tag:'Premium comfort'},
+    {id:'traveller',name:'Innova Crysta',seats:'7+1',image:'/assets/innova-crysta.jpg',four:2500,eight:4000,extra:20,tag:'Executive choice'}
   ];
   const localRateCarousel=()=>`<div class="local-rate-shell"><div class="local-rate-controls"><span class="eyebrow">Four-hour & full-day packages</span><div class="carousel-controls"><button type="button" data-local-rate-prev aria-label="Previous car rates">←</button><button type="button" data-local-rate-next aria-label="Next car rates">→</button></div></div><div class="local-rate-carousel" data-local-rate-carousel>${localRates.map(v=>`<article class="local-rate-card"><img src="${escape(v.image)}" alt="${escape(v.name)} cab" loading="lazy"><span class="vehicle-tag${v.featured ? ' vehicle-tag-featured' : ''}">${escape(v.tag)}</span><div class="local-rate-content"><h3>${escape(v.name)} <span>${escape(v.seats)} seats</span></h3><h4>Pricing</h4><p><span>4 Hr / 40 km</span><strong>${money(v.four)}</strong></p><p><span>8 Hr / 80 km</span><strong>${money(v.eight)}</strong></p><button class="btn btn-light" data-book-service="Local" data-vehicle="${v.id}">Book this vehicle →</button></div></article>`).join('')}</div></div>`;
   const homeRates=[
     {name:'Sedan',seats:'4+1 seats',image:'/assets/fleet-sedan.jpg',tag:'City comfort',airport:1300,local4:1300,local8:2300,fullDay:4200,outstation:4200,airportExtra:16,local4Km:15,local4Hour:190,local8Km:15,local8Hour:190,night:300},
-    {name:'Ciaz',seats:'4+1 seats',image:'/assets/fleet-sedan.jpg',tag:'Executive sedan',airport:2000,local4:1700,local8:2500,fullDay:5200,outstation:5200,airportExtra:16,local4Km:15,local4Hour:200,local8Km:16,local8Hour:200,night:400},
+    {name:'Ciaz',seats:'4+1 seats',image:'/assets/ciaz.jpg',tag:'Executive sedan',airport:2000,local4:1700,local8:2500,fullDay:5200,outstation:5200,airportExtra:16,local4Km:15,local4Hour:200,local8Km:16,local8Hour:200,night:400},
     {name:'Ertiga',seats:'6+1 seats',image:'/assets/fleet-mpv.jpg',tag:'Family favourite',airport:2100,local4:1900,local8:3000,fullDay:5200,outstation:5200,airportExtra:16,local4Km:16,local4Hour:200,local8Km:16,local8Hour:230,night:400},
-    {name:'Innova',seats:'7+1 seats',image:'/assets/fleet-suv.jpg',tag:'Premium comfort',airport:2200,local4:2300,local8:3200,fullDay:5800,outstation:5800,airportExtra:18,local4Km:17,local4Hour:230,local8Km:17,local8Hour:230,night:400},
-    {name:'Innova Crysta',seats:'7+1 seats',image:'/assets/fleet-suv.jpg',tag:'Executive choice',airport:2400,local4:2600,local8:3600,fullDay:6400,outstation:6400,airportExtra:20,local4Km:20,local4Hour:230,local8Km:20,local8Hour:230,night:400},
+    {name:'Innova',seats:'7+1 seats',image:'/assets/innova.jpg',tag:'Premium comfort',airport:2200,local4:2300,local8:3200,fullDay:5800,outstation:5800,airportExtra:18,local4Km:17,local4Hour:230,local8Km:17,local8Hour:230,night:400},
+    {name:'Innova Crysta',seats:'7+1 seats',image:'/assets/innova-crysta.jpg',tag:'Executive choice',airport:2400,local4:2600,local8:3600,fullDay:6400,outstation:6400,airportExtra:20,local4Km:20,local4Hour:230,local8Km:20,local8Hour:230,night:400},
     {name:'Tempo Traveller',seats:'Group vehicle',image:'/assets/fleet-traveller.jpg',tag:'Group travel',outstation:7500,night:600,groupOnly:true},
     {name:'Mini Bus',seats:'21 seater',image:'/assets/groovy-mini-bus.svg',tag:'Large group',outstation:11600,night:800,groupOnly:true}
   ];
