@@ -463,3 +463,8 @@ img,svg,video,canvas{max-width:100%}
 .vehicle-carousel-rail,.local-rate-carousel,.route-carousel{overflow-x:auto}
 #main>.hero,#main>.page-hero,#main>.routes-index,#main>.route-simple-heading,#main>.contact-section{animation:none!important;animation-delay:0s!important;opacity:1!important;transform:none!important;transition:none!important}
 #main>.hero :is(.hero-copy,.hero-copy h1,.hero-copy p),#main>.page-hero :is(h1,p),#main>.routes-index :is(h1,.routes-index-heading),#main>.route-simple-heading :is(h1,p),#main>.contact-section :is(.contact-heading,.contact-heading h1){animation:none!important;animation-delay:0s!important;opacity:1!important;transform:none!important;transition:none!important}
+
+/* Compact vehicle tags */
+.vehicle-tag{min-height:23px;padding-inline:8px;font-size:.58rem;letter-spacing:.025em;box-shadow:0 4px 12px #10181138}
+.vehicle-carousel-rail>.vehicle-card>.vehicle-tag{top:11px;left:11px}
+
