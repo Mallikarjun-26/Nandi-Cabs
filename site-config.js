@@ -1,2 +1,2 @@
 // Set whatsappNumber to the verified international number (digits only), phone details and canonicalOrigin before launch.
-window.CAB_CONFIG = { brand: 'Groovy Cabs', ownerName: '', ownerPhoto: '', phoneDisplay: '+91 99727 95946', phoneLink: '+919972795946', whatsappNumber: '919972795946', location: 'Bengaluru, Karnataka', canonicalOrigin: 'https://mallikarjun-26.github.io' };
+window.CAB_CONFIG = { brand: 'Groovy Cabs', ownerName: '', ownerPhoto: '', phoneDisplay: '+91 82176 08411', phoneLink: '+918217608411', whatsappNumber: '918217608411', location: 'Bengaluru, Karnataka', canonicalOrigin: 'https://mallikarjun-26.github.io' };
