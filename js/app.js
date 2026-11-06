@@ -100,4 +100,3 @@ const rateRows=(v,mode)=>v.groupOnly?[['Outstation · min. 300 km/day',v.outstat
 
 
 
-

@@ -83,4 +83,3 @@ window.CAB_DATA = {
     { name:'Nikhil R.', trip:'Outstation', quote:'A relaxed drive out of the city, with the fare details discussed before we set off.' }
   ]
 };
-
