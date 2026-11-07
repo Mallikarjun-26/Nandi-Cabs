@@ -1,11 +1,59 @@
-/* Shared Groovy Cabs green canvas */
-:root{--paper:#e8f0e5;--sage:#dce9d8;--line:#d0ddcb;--ink:#17271c;--muted:#5b6d5e}
-body{background:#e8f0e5;color:#17271c}
-.nav{background:#f2f6eff2;border-bottom-color:#d5e0d1}
-main{background:linear-gradient(180deg,#e8f0e5 0%,#edf3ea 50%,#e4eee1 100%)}
+/* Groovy Cabs parrot-green theme */
+:root{
+  --ink:#17271c;
+  --muted:#586b5a;
+  --paper:#eff6e9;
+  --white:#fff;
+  --forest:#23482a;
+  --forest2:#15351d;
+  --sage:#e3efd9;
+  --gold:#79d342;
+  --parrot:#79d342;
+  --parrot-bright:#8be34f;
+  --parrot-deep:#5ab92c;
+  --parrot-soft:#e7f4dd;
+  --line:#cfe0c5;
+  --shadow:0 18px 48px #1c392518;
+}
+body{background:linear-gradient(180deg,#eff6e9 0%,#f5f8f1 42%,#eaf3e3 100%);color:var(--ink)}
+::selection{background:#b8ec91;color:#17351d}
+.nav{background:#f5faeff2;border-bottom-color:#cfe0c5}
+.nav-links a:hover,.nav-links a[aria-current=page]{color:#397d2b}
+.brand-mark{background:linear-gradient(145deg,#8be34f,#5ab92c);color:#17351d}
+main{background:linear-gradient(180deg,#eff6e9 0%,#f5f8f1 48%,#eaf3e3 100%)}
 main>.section{background:transparent}
-main>.section.soft{background:linear-gradient(135deg,#dce9d8 0%,#e8f0e5 58%,#d9e7d5 100%)}
-.routes-index,.route-simple-heading{background:#e8f0e5}
-.route-simple-heading{background:linear-gradient(120deg,#e2eddf,#f1f6ee);border-color:#d0ddcb}
-.route-rate-card{background:linear-gradient(145deg,#f4f8f1,#e5efe2);border-color:#d1dfcd}
-.contact-section,.faq-section-premium{background-color:#e8f0e5}
+main>.section.soft{background:linear-gradient(135deg,#e3efd9 0%,#f0f6e9 54%,#dcebd2 100%)}
+.routes-index,.route-simple-heading,.contact-section,.faq-section-premium{background-color:#eff6e9}
+.route-simple-heading{background:linear-gradient(120deg,#e3efd9,#f5f9f1);border-color:var(--line)}
+.route-rate-card,.route-card,.attraction-card{background:linear-gradient(145deg,#fff 0%,#f3f8ee 100%);border-color:#d2e3c8}
+.eyebrow,.service-no,.feature-symbol,.route-back-link{color:#4b912f}
+.btn-gold{background:linear-gradient(115deg,#8be34f 0%,#70ce38 55%,#5fbd30 100%);border-color:#6dbd3d;color:#17351d;box-shadow:0 8px 22px #5ab92c30,inset 0 1px 0 #ffffff9c}
+.btn-gold:hover{background:linear-gradient(115deg,#98eb5d,#70ce38 60%,#63c333);box-shadow:0 12px 26px #5ab92c40}
+.btn-primary{background:linear-gradient(125deg,#285631,#173b21);border-color:#4e8b3c;color:#fff}
+.btn-primary:hover{background:linear-gradient(125deg,#346a39,#1c4725)}
+.btn-light{background:linear-gradient(135deg,#fff,#edf6e7);border-color:#c8ddb9;color:#1d3922}
+.btn-light:hover{background:#e5f4dc;border-color:#8dcc67}
+.link-arrow:after{color:#65bf34}
+input:focus,select:focus,textarea:focus,.route-card:focus-visible{outline-color:#70cb3d;border-color:#70cb3d;box-shadow:0 0 0 3px #79d34235}
+.service-tabs{background:#e4efdc;border:1px solid #c6dfb8}
+.service-tabs button.active{background:linear-gradient(130deg,#8be34f,#67c334);color:#17351d;box-shadow:inset 0 1px 0 #ffffffa8,0 3px 10px #2b5a2430}
+.booking-card{border-color:#b8d99f;box-shadow:0 20px 65px #1d392125,inset 0 1px 0 #fff}
+#quick-book.booking-card{border-color:#a9d790;background:linear-gradient(145deg,#fff 0%,#f4f9ee 55%,#e7f3df 100%);box-shadow:0 26px 72px #19371f35,inset 0 1px 0 #fff}
+#quick-book>.btn{background:linear-gradient(115deg,#2e6334,#173b20);border-color:#71c842;color:#fff}
+.booking-card .service-tabs{border-color:#74c849}
+.booking-card .service-tabs button.active{background:linear-gradient(135deg,#8be34f,#66c233);color:#18361e}
+.local-rate-card,.vehicle-card{border-color:#cfe2c4;background:linear-gradient(155deg,#fff 0%,#f4f8ef 62%,#e7f1e0 100%);box-shadow:0 14px 34px #244a2515}
+.local-rate-card>img{background:linear-gradient(180deg,#f7faF3,#eaf3e3)}
+.local-rate-content h3,.local-rate-content>p strong{color:#244e29}
+.local-rate-content>p{border-color:#d8e7cf}
+.vehicle-tag-featured{border-color:#c4edaa;background:linear-gradient(110deg,#e5f8d7,#87df4c);color:#1d3c23;box-shadow:0 7px 18px #5ab92c35}
+.local-rate-card:hover,.vehicle-card:hover,.route-rate-card:hover,.route-card:hover,.attraction-card:hover{border-color:#91cf6a;box-shadow:0 18px 42px #244a2522}
+.carousel-controls button{border-color:#cfe0c5;background:#f9fcf6;color:#285631}
+.carousel-controls button:hover{background:#72ce3e;border-color:#72ce3e;color:#17351d}
+.faq-shell,.journey-promise-card,.journey-steps-card{border-color:#d1e3c7;background:linear-gradient(145deg,#fff 0%,#f3f8ee 100%)}
+.footer{background:linear-gradient(135deg,#183b21 0%,#102a18 100%);border-top:1px solid #4b8f35;color:#f5faef}
+.footer-links a:hover{color:#94e65d}
+.footer-bottom{border-color:#ffffff24;color:#cadbc2}
+.footer .link-arrow,.footer .eyebrow{color:#95e663}
+.footer .whatsapp-link{color:#25D366}
+
