@@ -57,3 +57,33 @@ input:focus,select:focus,textarea:focus,.route-card:focus-visible{outline-color:
 .footer .link-arrow,.footer .eyebrow{color:#95e663}
 .footer .whatsapp-link{color:#25D366}
 
+
+/* Conversion-first Groovy Cabs refinements */
+.call-top{gap:8px;color:var(--ink)}
+.call-top-number{font-weight:var(--font-weight-body);font-variant-numeric:tabular-nums;white-space:nowrap}
+.hero-buttons .btn-gold,.page-hero-actions .btn-gold{background:linear-gradient(130deg,#8be34f,#6fc936);border-color:#61b82f;color:#17351d;box-shadow:0 8px 22px #5ab92c30}
+.hero-buttons .whatsapp-cta,.page-hero-actions .whatsapp-cta{background:#25D366;border-color:#25D366;color:#10321c}
+.hero-buttons .whatsapp-cta:hover,.page-hero-actions .whatsapp-cta:hover{background:#21c65e;border-color:#21c65e;color:#10321c}
+.page-hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:16px}
+.page-hero-actions .btn{min-height:48px;margin:0}
+.page-hero-booking{display:inline-flex;align-items:center;min-height:44px;padding:0 8px;color:#f2f8ed;text-decoration:underline;text-underline-offset:4px}
+.mobile-cta{display:none}
+@media(max-width:1050px){.call-top-number{display:none}}
+@media(max-width:800px){
+  .mobile-cta{position:fixed;inset:0;z-index:48;display:block;pointer-events:none}
+  .mobile-cta-contact{position:fixed;left:0;right:0;bottom:0;display:flex;flex-direction:row;gap:10px;padding:8px max(14px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));background:#f5faef;border-top:1px solid #cfe0c5;box-shadow:0 -8px 24px #18381f16;pointer-events:auto}
+  .mobile-contact-btn{flex:1 1 0;width:auto;height:48px;min-width:0;min-height:48px;gap:8px;border-radius:9px;font-size:.88rem;font-weight:var(--font-weight-heading);text-decoration:none}
+  .mobile-whatsapp{background:#25D366;border-color:#25D366;color:#10321c}
+  .mobile-call{background:linear-gradient(130deg,#8be34f,#70ce38);border-color:#68bf36;color:#17351d}
+  .mobile-contact-btn .whatsapp-icon,.mobile-contact-btn .phone-icon{width:19px;height:19px;flex:0 0 19px;fill:currentColor}
+  main{padding-bottom:82px}
+  .footer{padding-bottom:calc(92px + env(safe-area-inset-bottom))}
+  .page-hero-actions{gap:9px}
+  .page-hero-actions .btn{flex:1 1 135px}
+}
+@media(max-width:380px){.mobile-cta-contact{gap:8px;padding-inline:max(10px,env(safe-area-inset-right)) max(10px,env(safe-area-inset-left))}.mobile-contact-btn{font-size:.82rem}}
+@media(prefers-reduced-motion:reduce){.mobile-contact-btn,.hero-buttons .btn,.page-hero-actions .btn{transition:none}}
+
+.home-rate-note{margin:10px 0 0;padding-top:10px;border-top:1px solid #d9e7d0;color:#536953;font-size:.78rem;line-height:1.45}
+.home-rate-prices{min-width:0}
+

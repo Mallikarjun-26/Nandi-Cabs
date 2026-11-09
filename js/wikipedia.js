@@ -116,3 +116,4 @@
     }).catch(()=>{extract.textContent='Wikipedia details could not be loaded. Open the article for more information.'; attribution.textContent='Wikipedia';});
   });
 })();
+

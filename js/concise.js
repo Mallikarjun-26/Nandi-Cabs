@@ -32,7 +32,6 @@
     const meta = main.querySelector('.hero-meta');
     if (meta) meta.remove();
     const heroButtons = main.querySelectorAll('.hero-buttons .btn');
-    if (heroButtons[0]) heroButtons[0].textContent = 'Book a cab';
     if (heroButtons[1]) { const icon = heroButtons[1].querySelector('.whatsapp-icon')?.cloneNode(true); heroButtons[1].replaceChildren(...(icon ? [icon, document.createTextNode(' WhatsApp')] : [document.createTextNode('WhatsApp')])); }
     const headings = main.querySelectorAll('.section-head h2');
     if (headings[0]) headings[0].textContent = 'Choose a vehicle';
@@ -64,3 +63,5 @@
   });
   if (window.innerWidth > 760) document.querySelector('.nav-links .mobile-menu-book')?.remove();
 })();
+
+

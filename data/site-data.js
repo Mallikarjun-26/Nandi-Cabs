@@ -55,10 +55,13 @@ const routeNotes={
 };
 window.CAB_DATA = {
   vehicles: [
-    { id:'sedan', name:'Comfort Sedan', seats:4, note:'Comfortable sedan.', airport:1450, local4:1300, local8:2200, perKm:13, minKm:300, allowance:350, image:'assets/fleet-sedan.jpg', features:['Air-conditioned','2 bags'] },
-    { id:'mpv', name:'Family MPV', seats:6, note:'Space for family trips.', airport:1950, local4:1500, local8:2600, perKm:17, minKm:300, allowance:400, image:'assets/fleet-mpv.jpg', features:['Air-conditioned','4 bags'] },
-    { id:'premium', name:'Premium SUV', seats:6, note:'Extra room for longer trips.', airport:2650, local4:2000, local8:3500, perKm:21, minKm:300, allowance:450, image:'assets/fleet-suv.jpg', features:['Air-conditioned','4 bags'] },
-    { id:'traveller', name:'Tempo Traveller', seats:12, note:'Group transport.', airport:4900, local4:2500, local8:4000, perKm:28, minKm:300, allowance:600, image:'assets/fleet-traveller.jpg', features:['Air-conditioned','Group luggage'] }
+    { id:'sedan', name:'Sedan', seats:'4+1', note:'Sedan for city and airport rides.', airport:1300, airportExtra:16, local4:1300, local8:2300, local4Km:15, local4Hour:190, local8Km:15, local8Hour:190, fullDay:4200, outstation:4200, minKm:300, allowance:300, night:300, image:'assets/fleet-sedan.jpg', features:['Air-conditioned'] },
+    { id:'ciaz', name:'Ciaz', seats:'4+1', note:'Executive sedan for private trips.', airport:2000, airportExtra:16, local4:1700, local8:2500, local4Km:15, local4Hour:200, local8Km:16, local8Hour:200, fullDay:5200, outstation:5200, minKm:300, allowance:400, night:400, image:'assets/fleet-sedan.jpg', features:['Air-conditioned'] },
+    { id:'mpv', name:'Ertiga', seats:'6+1', note:'MPV for family and group travel.', airport:2100, airportExtra:16, local4:1900, local8:3000, local4Km:16, local4Hour:200, local8Km:16, local8Hour:230, fullDay:5200, outstation:5200, minKm:300, allowance:400, night:400, image:'assets/fleet-mpv.jpg', features:['Air-conditioned'] },
+    { id:'innova', name:'Innova', seats:'7+1', note:'Spacious MPV for longer journeys.', airport:2200, airportExtra:18, local4:2300, local8:3200, local4Km:17, local4Hour:230, local8Km:17, local8Hour:230, fullDay:5800, outstation:5800, minKm:300, allowance:400, night:400, image:'assets/fleet-suv.jpg', features:['Air-conditioned'] },
+    { id:'crysta', name:'Innova Crysta', seats:'7+1', note:'Premium MPV for private journeys.', airport:2400, airportExtra:20, local4:2600, local8:3600, local4Km:20, local4Hour:230, local8Km:20, local8Hour:230, fullDay:6400, outstation:6400, minKm:300, allowance:400, night:400, image:'assets/fleet-suv.jpg', features:['Air-conditioned'] },
+    { id:'traveller', name:'Tempo Traveller', seats:'12+', note:'Group vehicle for larger parties.', outstation:7500, minKm:300, allowance:600, night:600, groupOnly:true, image:'assets/fleet-traveller.jpg', features:['Air-conditioned'] },
+    { id:'minibus', name:'Mini Bus', seats:'21', note:'21-seat vehicle for large groups.', outstation:11600, minKm:300, allowance:800, night:800, groupOnly:true, image:'assets/groovy-mini-bus.svg', features:['21 seats'] }
   ],
   routes: [
     { slug:'bangalore-to-mysore', name:'Mysore', distance:'about 145 km', time:'about 3.5 hours', note:'Palaces, markets and an easy change of pace.',wiki:'Mysore',places:placesByCity.mysore },
@@ -76,10 +79,6 @@ window.CAB_DATA = {
     ['When will I receive driver details?','Driver and vehicle details are shared after the trip is confirmed. Contact the team directly if your pickup is approaching and you have not received them.'],
     ['What is the cancellation policy?','Cancellation terms depend on the booking and timing. Ask the team to include the applicable terms in your confirmation.'],
     ['Can I pay online?','Payment options are confirmed when your booking is accepted. Do not send payment until you have received booking details from the operator.']
-  ],
-  testimonials: [
-    { name:'Aarav K.', trip:'Airport transfer', quote:'The pickup was easy to coordinate and the car gave us plenty of room for luggage.' },
-    { name:'Meera S.', trip:'Bengaluru local', quote:'Booked a full day for a few meetings across town. Having one driver made the day feel simple.' },
-    { name:'Nikhil R.', trip:'Outstation', quote:'A relaxed drive out of the city, with the fare details discussed before we set off.' }
   ]
 };
+

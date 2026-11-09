@@ -123,3 +123,4 @@
     mobileCtaTargets.forEach(target => observer.observe(target));
   }
 })();
+

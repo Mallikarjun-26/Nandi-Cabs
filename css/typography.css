@@ -1,8 +1,9 @@
 /* Groovy Cabs type weights: use only these roles across every page. */
 :root{--font-weight-body:400;--font-weight-subheading:500;--font-weight-heading:700}
 *{font-weight:var(--font-weight-body)!important}
-h1,h2{font-weight:var(--font-weight-heading)!important}
-h3,h4,h5,h6{font-weight:var(--font-weight-subheading)!important}
+h1,h2,h3,h4,h5,h6{font-weight:var(--font-weight-heading)!important}
 button,.btn,label,summary,strong,b,.eyebrow,.booking-kicker,.step-no,.vehicle-tag,.brand,.brand-name,.link-arrow,.price,.route-rate-card>strong{font-weight:var(--font-weight-subheading)!important}
 h1 *,h2 *{font-weight:var(--font-weight-heading)!important}
 h3 *,h4 *,h5 *,h6 *,button *, .btn *,label *,summary *{font-weight:var(--font-weight-subheading)!important}
+.subheading,.section-kicker,.form-label{font-weight:var(--font-weight-subheading)!important}
+

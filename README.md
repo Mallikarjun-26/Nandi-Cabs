@@ -1,31 +1,28 @@
 # Groovy Cabs
 
-A lightweight, static, multi-page cab booking site. No build step or external JavaScript dependencies are required.
+A lightweight, static, multi-page cab booking site. It runs without a build step or third-party JavaScript framework.
 
 ## Run locally
 
-Serve this directory with any static web server (for example, `npx serve .`) and open the local URL. Do not open HTML files directly: absolute asset and route paths expect a web server at the domain root.
+Serve this directory from a local static web server and open its URL. Do not open HTML files directly; the pages use root-relative asset and route links.
 
-## Before launch
+## Business configuration
 
-1. Update `site-config.js` with the real business name, phone link, WhatsApp international number, canonical domain and location.
-2. Review `data/site-data.js`: fares and route distances are illustrative planning figures and must be confirmed by the operator before launch.
-3. Replace sample testimonials with customer-approved quotes or remove them.
-4. Review the draft privacy and booking terms with the operating business.
-5. Replace any remaining section photographs if desired; the home hero is a locally optimized image and vehicle photos are in `assets/`.
+- `site-config.js` is the single source for brand name, phone, WhatsApp number, service area and canonical domain.
+- `data/site-data.js` contains the fleet, owner rate-card amounts, route estimates and FAQs. Fares remain indicative until the operator confirms a particular trip.
+- Booking details are prepared in the visitor’s browser and opened in WhatsApp. The customer must tap Send; the site does not silently send messages or confirm/store a reservation on a server.
+- Review the cancellation terms and privacy policy with the operator before treating those pages as final policy.
+- Genuine customer reviews can be added once the business supplies approved review text and attribution. The site currently does not display sample testimonials, ratings or customer counts.
 
-The trip form gathers the passenger and journey details, creates a booking reference, and opens a prefilled WhatsApp Business chat after `whatsappNumber` is configured. The customer must press Send in WhatsApp; the page does not silently send messages or create a server-side reservation. If the number is blank, the final action remains disabled with a setup note. Browser-calculated estimates are not final booking prices.
+## SEO and conversion tracking
 
+The static page heads contain page-specific titles, descriptions and canonical URLs for `https://groovycabs.com`. `sitemap.xml`, `robots.txt`, Open Graph metadata, TaxiService/Service/FAQ/Breadcrumb structured data and route pages use the same public domain.
 
-Route cards and destination pages load Wikipedia article summaries and thumbnails from Wikimedia at runtime. Photo cards include creator/license credit links to Wikimedia Commons; the pages need an internet connection for this content.
+The app queues descriptive conversion events in `window.dataLayer` and dispatches `groovy:conversion` events for calls, WhatsApp, booking and route actions. No Google Tag Manager or Ads ID is installed; add the owner’s verified measurement IDs before expecting events to appear in analytics or count as Ads conversions.
 
-## Search and business setup
+Route cards can retrieve destination summaries and images from Wikipedia/Wikimedia when network access is available.
 
-Page titles and descriptions are unique in the static page heads and refined by `js/seo.js`. Canonical links, social preview URLs and breadcrumb URLs remain unset until `canonicalOrigin` in `site-config.js` is set to the production HTTPS domain. Populate `sitemap.xml` with absolute production URLs and add its production URL to `robots.txt` after setting the canonical domain. Add verified phone and WhatsApp details to the same config before launch; no street address, contact details, review scores or awards are invented.
+## Hosting notes
 
-Route carousel photos prefer a listed tourist attraction, then try other attractions and the destination thumbnail. Creator and license credits link to Wikimedia Commons.
+`_headers` provides baseline security headers for static hosts that honor this format. GitHub Pages does not apply `_headers`; configure equivalent headers at the hosting/CDN layer and verify the deployed HTTPS responses.
 
-
-## Static-host security headers
-
-The _headers file provides baseline CSP, HSTS, clickjacking, MIME-sniffing, referrer and permissions headers for hosts that support this convention (including Netlify and Cloudflare Pages). GitHub Pages does not apply _headers; configure equivalent headers at the production CDN or hosting layer. Verify the deployed HTTPS response headers after publishing.

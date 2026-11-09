@@ -467,3 +467,4 @@ img,svg,video,canvas{max-width:100%}
 /* Compact vehicle tags */
 .vehicle-tag{min-height:23px;padding-inline:8px;font-size:.58rem;letter-spacing:.025em;box-shadow:0 4px 12px #10181138}
 .vehicle-carousel-rail>.vehicle-card>.vehicle-tag{top:11px;left:11px}
+
