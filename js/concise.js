@@ -26,7 +26,7 @@
     const eyebrow = main.querySelector('.hero-copy .eyebrow');
     if (eyebrow) eyebrow.textContent = 'Private rides · Bengaluru & beyond';
     const title = main.querySelector('.hero h1');
-    if (title) title.innerHTML = 'Bengaluru cabs. <span class="serif">Book direct.</span>';
+    if (title) title.innerHTML = 'Groovy Cabs. <span class="serif">Book direct.</span>';
     const intro = main.querySelector('.hero-copy > p');
     if (intro) intro.textContent = 'Airport, local and outstation rides. Share your trip details for a fare and confirmation.';
     const meta = main.querySelector('.hero-meta');
