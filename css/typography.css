@@ -7,3 +7,90 @@ h1 *,h2 *{font-weight:var(--font-weight-heading)!important}
 h3 *,h4 *,h5 *,h6 *,button *, .btn *,label *,summary *{font-weight:var(--font-weight-subheading)!important}
 .subheading,.section-kicker,.form-label{font-weight:var(--font-weight-subheading)!important}
 
+/* Mobile finish: calm type scale, even spacing, and clear touch controls. */
+@media(max-width:760px){
+  body{font-size:16px;line-height:1.55;letter-spacing:0}
+  h1{font-size:clamp(2.25rem,8.8vw,3.15rem);line-height:1.06;letter-spacing:-.05em}
+  h2{font-size:clamp(1.75rem,7vw,2.35rem);line-height:1.12;letter-spacing:-.04em}
+  h3{font-size:1.08rem;line-height:1.25;letter-spacing:-.025em}
+  p{line-height:1.6}
+  .wrap,.hero-inner{width:calc(100% - 36px);max-width:560px}
+  main .section{padding-block:54px}
+  main .section.section-tight{padding-block:42px}
+  .section-head{margin-bottom:24px}
+  .section-head p,.page-hero p{font-size:.94rem;line-height:1.6}
+  .eyebrow{font-size:.67rem;letter-spacing:.13em}
+  .nav{height:64px}
+  .nav-links{inset-block-start:64px;padding:14px 20px calc(110px + env(safe-area-inset-bottom));gap:0}
+  .nav-links a{min-height:52px;display:flex;align-items:center;padding:12px 2px;font-size:.98rem}
+  .nav-actions{gap:8px}
+  .hero-inner{padding-bottom:26px}
+  .hero-copy{padding:48px 0 23px}
+  .hero h1{max-width:12ch;margin:10px 0 12px;font-size:clamp(2.35rem,9.2vw,3.3rem)}
+  .hero-copy>p{max-width:38ch;font-size:.96rem;line-height:1.58}
+  .hero-buttons{gap:9px;margin:18px 0}
+  .hero-buttons .btn,.page-hero-actions .btn{min-height:46px;padding-inline:16px;font-size:.84rem}
+  .hero-meta{gap:8px 14px;font-size:.72rem}
+  #quick-book.booking-card{padding:18px;border-radius:14px}
+  .booking-card h2{font-size:1.35rem;line-height:1.2}
+  .booking-card>p:not(.booking-note){margin-bottom:14px;font-size:.84rem}
+  .service-tabs{margin-bottom:15px;padding:3px;border-radius:10px}
+  .service-tabs button{min-height:43px;padding:8px 4px;border-radius:8px;font-size:.76rem}
+  .field-grid{gap:11px}
+  .field{gap:5px}
+  .field label{font-size:.75rem}
+  .field input,.field select,.field textarea{height:46px;padding-inline:12px;border-radius:8px;font-size:.94rem}
+  #quick-book>.btn{min-height:48px;border-radius:9px;font-size:.86rem}
+  .trust-strip{padding-block:17px}
+  .trust-items{gap:12px 8px}
+  .trust-item{font-size:.73rem;line-height:1.35}
+  .route-card,.feature,.quote,.route-rate-card{border-radius:12px}
+  .route-card{padding:14px;min-height:132px}
+  .route-card h3{font-size:.98rem;line-height:1.25}
+  .vehicle-carousel-rail{scroll-padding-inline:18px;padding-inline:1px 18px;scrollbar-width:none}
+  .vehicle-carousel-rail::-webkit-scrollbar,.local-rate-carousel::-webkit-scrollbar{display:none}
+  .vehicle-carousel-rail>.vehicle-card{border-radius:15px}
+  .vehicle-carousel-rail>.vehicle-card>img{height:142px;object-fit:cover}
+  .vehicle-carousel-rail .vehicle-content{padding:14px}
+  .vehicle-carousel-rail .vehicle-content h3{font-size:1.04rem}
+  .vehicle-carousel-rail .vehicle-note{font-size:.76rem;line-height:1.45}
+  .vehicle-carousel-rail .check-list{font-size:.73rem;line-height:1.4}
+  .vehicle-carousel-rail .btn-light{min-height:44px}
+  .page-hero{padding:42px 0 38px}
+  .page-hero h1{font-size:clamp(2.15rem,8.3vw,3.05rem);line-height:1.08;margin:9px 0 12px}
+  .routes-index{min-height:0;padding:30px 0 46px}
+  .route-simple-heading{padding:21px 0 18px}
+  .route-detail-panel,.contact-profile-card,.contact-details-card{border-radius:14px}
+  .contact-section{min-height:0;padding:44px 0 56px}
+  .faq-section-premium{padding-block:48px}
+  .faq-shell{border-radius:14px}
+  .faq-shell .faq-q{font-size:.9rem;line-height:1.4}
+  .faq-shell .faq-a{font-size:.84rem;line-height:1.6}
+  .cta-band{padding-block:38px}
+  .cta-inner h2{font-size:1.75rem;line-height:1.12}
+  .cta-inner p{font-size:.9rem}
+  .mobile-cta-contact{gap:8px;padding:8px max(14px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left))}
+  .mobile-contact-btn{min-height:46px;height:46px;border-radius:10px;font-size:.83rem}
+  .footer{padding-top:32px}
+  .footer-grid{gap:22px 16px}
+  .footer h3{font-size:.84rem}
+  .footer-links{font-size:.78rem;line-height:1.45}
+}
+@media(max-width:390px){
+  .wrap,.hero-inner{width:calc(100% - 32px)}
+  .section-head{margin-bottom:20px}
+  .hero-copy{padding-top:40px}
+  .hero-buttons .btn{padding-inline:13px;font-size:.8rem}
+  .trust-items{grid-template-columns:1fr 1fr}
+  .vehicle-carousel-rail>.vehicle-card{flex-basis:86vw}
+  .route-grid{gap:8px}
+  .route-card{padding:12px}
+}
+@media(max-width:350px){
+  .wrap,.hero-inner{width:calc(100% - 28px)}
+  .hero-buttons{flex-wrap:wrap}
+  .mobile-contact-btn{font-size:.77rem;gap:6px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-grid>div:first-child{grid-column:auto}
+}
+
